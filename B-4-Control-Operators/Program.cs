@@ -11,6 +11,9 @@ namespace Basic.Lesson_4._1
     {
         static void Main(string[] args)
         {
+            //Practice.B4_P13_25_For_LettersCount();
+            //Practice.B4_P14_25_For_AlphabetBack();
+            Practice.B4_P18_25_While_Multiplier();
              Console.ReadLine();
         }
      }

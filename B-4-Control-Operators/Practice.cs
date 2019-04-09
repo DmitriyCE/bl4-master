@@ -94,15 +94,19 @@ namespace Basic.Lesson_4._1
                     count += 1;
                 }
             }
-            WriteLine("Буква содежится в слове" + $"{count}" + "раз");
-            ReadLine();
+            WriteLine("Количество букв а в слове: " + $"{count}");
         }
 
 
         //B4-P14/25 *For_AlphabetBack
         public static void B4_P14_25_For_AlphabetBack()
         {
-            
+            char a = 'a';
+            char z = 'z';
+            for (int i = Convert.ToInt32(z); i >= Convert.ToInt32(a); i--)
+            {
+                WriteLine(Convert.ToChar(i));
+            }
         }
 
 
@@ -129,7 +133,18 @@ namespace Basic.Lesson_4._1
         //B4-P18/25 While_Multiplier
         public static void B4_P18_25_While_Multiplier()
         {
-            
+            WriteLine("Введите число");
+            int number = Convert.ToInt32(ReadLine());
+            WriteLine("Введите степень в которую возведется введенное ранее число");
+            int pow = Convert.ToInt32(ReadLine());
+            int result = 1;
+            int i = 0;
+            while (i < pow)
+            {
+                result *= number;
+                i++;
+            }
+            WriteLine(result);
         }
 
 
