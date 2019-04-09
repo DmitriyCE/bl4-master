@@ -94,8 +94,8 @@ namespace Basic.Lesson_4._1
                     count += 1;
                 }
             }
-            WriteLine("Буква содежится в слове" + $"{count}"
-
+            WriteLine("Буква содежится в слове" + $"{count}" + "раз");
+            ReadLine();
         }
 
 
