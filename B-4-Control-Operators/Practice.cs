@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -83,7 +84,18 @@ namespace Basic.Lesson_4._1
         //B4-P13/25 For_LettersCount
         public static void B4_P13_25_For_LettersCount()
         {
-            
+            WriteLine("Введите слово содержащее букву 'а'");
+            string word = ReadLine();
+            int count=0;
+            for (int i = 0;i<word.Length; i++)
+            {
+                if (word[i] == Convert.ToChar("а"))
+                {
+                    count += 1;
+                }
+            }
+            WriteLine("Буква содежится в слове" + $"{count}"
+
         }
 
 
