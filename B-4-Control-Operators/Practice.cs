@@ -163,16 +163,63 @@ namespace Basic.Lesson_4._1
 
 
         //B4-P21/25 *While_DiceGameMultiplePlayers
-        public static void dB4_P21_25_While_DiceGameMultiplePlayers()
+        public static void B4_P21_25_While_DiceGameMultiplePlayers()
         {
-            WriteLine();
+            int positionPlayer1 = 0;
+            int positionPlayer2 = 0;
+            while (positionPlayer1<=25||positionPlayer2 <= 25)
+            {
+                WriteLine("Player1: введите число от 1 до 6");
+                int numberPlayer1 = Convert.ToInt32(ReadLine());
+                positionPlayer1 += numberPlayer1;
+                WriteLine("Позиция Player1: "+Convert.ToString(positionPlayer1));
+                if (positionPlayer1 >= 25)
+                {
+                    WriteLine("Player1 дошел первым!");
+                    break;
+                }
+                WriteLine("Player2: введите число от 1 до 6");
+                int numberPlayer2 = Convert.ToInt32(ReadLine());
+                positionPlayer2 += numberPlayer2;
+                WriteLine("Позиция Player2: " + Convert.ToString(positionPlayer2)); 
+                if (positionPlayer2 >= 25)
+                {
+                    WriteLine("Player2 дошел первым!");
+                    break;
+                }
+            } 
         }
 
 
         //B4-P22_25 *While_Akinator100Numbers
         public static void B4_P22_25_While_Akinator100Numbers()
         {
-            
+            WriteLine("Загадайте число от 1 до 100");
+            ReadLine();
+            int x = 50;
+            int a = 1;
+            int b = 100;
+            string answer=null;
+            while (answer != "=")
+            {
+                WriteLine("Ваше число больше, меньше или равно "+ $"{x}"+ " ?(>/</=)");
+                answer = ReadLine();
+                if (answer == ">")
+                {
+                    a = x;
+                    x = a + ((b - a) / 2);
+                }
+                if (answer == "<")
+                {
+                    b = x;
+                    x = a + ((b - a) / 2);
+                }
+                if (answer == "=")
+                {
+                    WriteLine("Ваше число"+$"{x}");
+                }
+            }
+
         }
 
 
@@ -193,6 +240,14 @@ namespace Basic.Lesson_4._1
         //B4-P25/25 Cycle_WordRevercse
         public static void B4_P25_25_Cycle_WordRevercse()
         {
+            WriteLine("Введите слово");
+            string word = ReadLine();
+            string reverse = null;
+            for (int i = word.Length; i > 0; i--)
+            {
+                reverse += word[i-1];
+            }
+            WriteLine(reverse);
         }
     }
 }
