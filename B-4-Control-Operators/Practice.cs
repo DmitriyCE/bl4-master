@@ -165,6 +165,7 @@ namespace Basic.Lesson_4._1
         //B4-P21/25 *While_DiceGameMultiplePlayers
         public static void dB4_P21_25_While_DiceGameMultiplePlayers()
         {
+            WriteLine();
         }
 
 
